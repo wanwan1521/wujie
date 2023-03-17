@@ -265,10 +265,10 @@ const plugins = [
 const plugins = [
   {
     windowAddEventListenerHook(iframeWindow, type, handler, options) {
-      container.addEventListener(type, handler, options);
+      iframeWindow.addEventListener(type, handler, options);
     },
     windowRemoveEventListenerHook(iframeWindow, type, handler, options) {
-      container.removeEventListener(type, handler, options);
+      iframeWindow.removeEventListener(type, handler, options);
     },
   },
 ];
@@ -286,7 +286,7 @@ const plugins = [
 const plugins = [
   {
     documentAddEventListenerHook(iframeWindow, type, handler, options) {
-      container.addEventListener(type, handler, options);
+      iframeWindow.addEventListener(type, handler, options);
     },
   },
 ];
@@ -302,10 +302,10 @@ const plugins = [
 const plugins = [
   {
     documentAddEventListenerHook(iframeWindow, type, handler, options) {
-      container.addEventListener(type, handler, options);
+      iframeWindow.addEventListener(type, handler, options);
     },
     documentRemoveEventListenerHook(iframeWindow, type, handler, options) {
-      container.removeEventListener(type, handler, options);
+      iframeWindow.removeEventListener(type, handler, options);
     },
   },
 ];
